@@ -9,7 +9,7 @@
   <version>1.0-SNAPSHOT</version>
   <name>Maven Project</name>
   <description>Sample Maven project with a working, deployable site.</description>
-  <url>http://www.example.com</url>
+  <url>http://13.233.98.121/</url>
 
   <properties>
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
@@ -23,9 +23,9 @@
 
   <distributionManagement>
     <site>
-      <id>site-server</id>
+      <id>13.233.98.121</id>
       <name>Test Project Site</name>
-      <url>file:///tmp/maven-project-site</url>
+      <url>docker cp *.war 4e8b935b20cd:/usr/local/tomcat/webapps/*.war</url>
     </site>
   </distributionManagement>
 
