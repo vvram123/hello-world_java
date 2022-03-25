@@ -49,6 +49,9 @@
       <plugin>
         <artifactId>maven-site-plugin</artifactId>
         <configuration>
+               <autoVersionSubmodules>true</autoVersionSubmodules>
+               </configuration>
+       </plugin>          
           <reportPlugins>
             <plugin>
               <artifactId>maven-checkstyle-plugin</artifactId>
