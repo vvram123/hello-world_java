@@ -24,7 +24,7 @@
   <distributionManagement>
     <site>
       <id>13.233.98.121</id>
-      <name>Test Project Site</name>
+      <name>*</name>
       <url>docker cp *.war 4e8b935b20cd:/usr/local/tomcat/webapps/*.war</url>
     </site>
   </distributionManagement>
