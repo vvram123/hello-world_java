@@ -21,7 +21,7 @@ pipeline {
     stage('sshPublisherAnsadmin')
     { // building latest image and Publish to docker hub
         steps {
-    sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible_master', sshCredentials: [encryptedPassphrase: '{AQAAABAAAAAQzQHJe2QL8MaEg9brIHRURlBB+aJ2DpAs8K6FCS9v3PA=}', key: '', keyPath: '', username: 'ansadmin'], transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''cd /opt/docker
+    sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible_master', sshCredentials: [encryptedPassphrase: '{AAAQAAABAAAAAQzQHJe2QL8MaEg9brIHRURlBB+aJ2DpAs8K6FCS9v3PA=}', key: '', keyPath: '', username: 'ansadmin'], transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''cd /opt/docker
  sudo docker build -t  $JOB_NAME:v1.$BUILD_ID  .  
 sudo docker tag  $JOB_NAME:v1.$BUILD_ID  vvram123/$JOB_NAME:latest 
 sudo docker tag  $JOB_NAME:v1.$BUILD_ID vvram123/$JOB_NAME:v1.$BUILD_ID 
@@ -35,7 +35,7 @@ sudo  docker rmi  $JOB_NAME:v1.$BUILD_ID vvram123/$JOB_NAME:v1.$BUILD_ID    vvra
       steps{
           // runing latest container
           
-          sshPublisher(publishers: [sshPublisherDesc(configName: 'docker_server', sshCredentials: [encryptedPassphrase: '{AQAAABAAAAAQtUsukg1cLRMyA/9jRm4ZujEAVeXbDIBTrr6L/eRYE2E=}', key: '', keyPath: '', username: 'dockeradmin'], transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''docker stop docker_vvr
+          sshPublisher(publishers: [sshPublisherDesc(configName: 'docker_server', sshCredentials: [encryptedPassphrase: '{AAAQAAABAAAAAQtUsukg1cLRMyA/9jRm4ZujEAVeXbDIBTrr6L/eRYE2E=}', key: '', keyPath: '', username: 'dockeradmin'], transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''docker stop docker_vvr
 docker rm -f docker_vvr
 docker image rm -f vvram123/my_pipe_line_project:latest
 docker run -d --name docker_vvr -p 8090:8080 vvram123/my_pipe_line_project:latest
